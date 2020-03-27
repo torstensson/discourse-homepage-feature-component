@@ -15,10 +15,7 @@ export default {
 
     withPluginApi("0.1", api => {
       api.onPageChange(url => {
-        if (!settings.featured_tag) {
-          return;
-        }
-
+        
         const home = url === "/" || url.match(/^\/\?/) || url === homeRoute;
 
         let showBannerHere;
@@ -43,12 +40,15 @@ export default {
           titleElement.innerHTML = settings.title_text;
           component.set("titleElement", titleElement);
 
-          ajax(`/tags/${settings.featured_tag}.json`)
+          var topics_json = settings.featured_json;
+          if (settings.featured_tag != '') topics_json = `/tags/${settings.featured_tag}.json`;
+
+          ajax(topics_json)
             .then(result => {
               // Get posts from tag
               let customFeaturedTopics = [];
               result.topic_list.topics
-                .slice(0, 3)
+                .slice(0, 4)
                 .forEach(topic =>
                   customFeaturedTopics.push(Topic.create(topic))
                 );

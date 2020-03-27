@@ -1,3 +1,6 @@
+featured_json:
+  default: /latest.json
+
 featured_tag:
   default: featured
 

@@ -10,15 +10,14 @@
           <div class="featured-topics">
             {{#each customFeaturedTopics as |t|}}
               <div class="featured-topic">
-                <div
-                  class="featured-topic-image"
-                  style="background-image: url({{t.image_url}})"
-                >
+                <div class="featured-topic-image" style="background-image: url({{t.image_url}})">
                   <a href="/t/{{t.slug}}"></a>
                 </div>
-                <h3>
-                  {{topic-link t}}
-                </h3>
+                <div class="featured-topic-meta">
+                  <h5 class="featured-topic-category-name">{{category-link t.category}}</h5>
+                  <h3 class="featured-topic-title">{{topic-link t}}</h3>
+                  <span class="featured-topic-date-time">{{format-date t.bumpedAt format="medium-with-ago" noTitle="true"}}</span>
+                </div>
               </div>
             {{/each}}
           </div>
