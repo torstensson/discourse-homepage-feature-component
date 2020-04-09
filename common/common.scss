@@ -8,7 +8,6 @@
     }
 }
 
-
 body:not(.staff) {
 
     .tag-drop li[data-name="#{$featured-tag}"],
@@ -190,13 +189,17 @@ body:not(.staff) {
 
 .custom-homepage-wrapper{
     background-color: #F5F5F5;
+    padding-bottom: 1.6666667vw;
+    @media (max-width: 610) {
+        padding-bottom: 2.6666667vw;
+    }
 }
 .latest-topic-wrapper {
-    margin-top: 1.6666667vw;
+    margin-top: 2.6666667vw;
     max-width: 1110px;
     @media (max-width: 610) {
         margin-top: 2.6666667vw;
-    }    
+    }   
 }
 
 img.dt-lazy-loaded {
