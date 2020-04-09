@@ -188,8 +188,15 @@ body:not(.staff) {
     }
 }
 
-.latest-topic-wrapper {
+.custom-homepage-wrapper{
     background-color: #F5F5F5;
+}
+.latest-topic-wrapper {
+    margin-top: 1.6666667vw;
+    max-width: 1110px;
+    @media (max-width: 610) {
+        margin-top: 2.6666667vw;
+    }    
 }
 
 img.dt-lazy-loaded {
@@ -239,6 +246,7 @@ img.dt-lazy-loaded {
 .b-meta__title {
     font-size: 3.8666667vw;
     line-height: 1.3103448;
+    font-weight: inherit;
 }
 
 .dt-clamp {
@@ -266,6 +274,13 @@ img.dt-lazy-loaded {
     &>* {
         color: #252a40;
     }
+    &:nth-child(2n+1){
+        background-color: white;
+        .b-meta.is-color {
+            color: #252a40;
+        }
+    }
+
 }
 
 .b-brief__hot {
@@ -396,6 +411,11 @@ img.dt-lazy-loaded {
     }
 }
 
+@media (max-width: 610px) {
+    .b-grid>:not(:first-child) {
+        margin-top: 2.6666667vw;
+    }
+}
 
 @media (min-width: 610px) {
 
@@ -406,11 +426,7 @@ img.dt-lazy-loaded {
         grid-auto-rows: minmax(55px, max-content);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
-        grid-template-columns: repeat(auto-fill, 300px);
-    }
-
-    .b-grid>:not(:first-child) {
-        margin-top: 2.6666667vw;
+        grid-template-columns: repeat(auto-fill, 270px);
     }
 
     .b-grid__cols2,

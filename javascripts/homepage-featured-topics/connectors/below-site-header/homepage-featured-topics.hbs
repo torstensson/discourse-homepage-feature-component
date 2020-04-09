@@ -26,7 +26,7 @@
           {{conditional-loading-spinner condition=loadingFeatures}}
             <div class="b-grid b-page__grid">
               <div class="b-grid b-grid__cols2">
-                {{#each customLatestTopics as |t|}}
+                {{#each customLatestTopicsLeft as |t|}}
                 <div data-index="{{@index}}" class="b-brief b-grid__brief  b-grid__cols2  b-grid__rows4" style="color: #3c508a;">
                   <div class="b-meta b-brief__meta is-color">
                     <h3 class="b-meta__title b-brief__hot dt-clamp dt-clamp-3">{{topic-link t}}</h3>
@@ -42,7 +42,7 @@
                 {{/each}}
               </div>
               <div class="b-grid b-grid__cols2">
-              {{#each customLatestTopics as |t|}}
+              {{#each customLatestTopicsRight as |t|}}
               <div data-index="{{@index}}" class="b-snippet b-grid__snippet  b-grid__cols2  b-grid__rows2">
                 <div class="b-meta b-snippet__meta">
                   <h3 class="b-meta__title b-brief__hot dt-clamp dt-clamp-2">{{topic-link t}}</h3>

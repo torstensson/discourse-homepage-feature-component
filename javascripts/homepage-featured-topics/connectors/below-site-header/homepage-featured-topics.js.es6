@@ -54,13 +54,21 @@ export default {
                 );
               component.set("customFeaturedTopics", customFeaturedTopics);
 
-              let customLatestTopics = [];
+              let customLatestTopicsLeft = [];
               result.topic_list.topics
                 .slice(4, 12)
                 .forEach(topic =>
-                  customLatestTopics.push(Topic.create(topic))
+                  customLatestTopicsLeft.push(Topic.create(topic))
                 );
-              component.set("customLatestTopics", customLatestTopics);
+              component.set("customLatestTopicsLeft", customLatestTopicsLeft);
+
+              let customLatestTopicsRight = [];
+              result.topic_list.topics
+                .slice(13, 29)
+                .forEach(topic =>
+                  customLatestTopicsRight.push(Topic.create(topic))
+                );
+              component.set("customLatestTopicsRight", customLatestTopicsRight);
 
             })
             .finally(() => component.set("loadingFeatures", false))
