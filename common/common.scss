@@ -266,8 +266,10 @@ img.dt-lazy-loaded {
     &>* {
         color: #252a40;
     }
+}
 
-    .b-brief__hot {
+.b-brief__hot {
+    a {
         position: static;
 
         &:after {
@@ -281,6 +283,7 @@ img.dt-lazy-loaded {
         }
     }
 }
+
 
 .b-meta {
     &.is-color {

@@ -53,6 +53,15 @@ export default {
                   customFeaturedTopics.push(Topic.create(topic))
                 );
               component.set("customFeaturedTopics", customFeaturedTopics);
+
+              let customLatestTopics = [];
+              result.topic_list.topics
+                .slice(4, 12)
+                .forEach(topic =>
+                  customLatestTopics.push(Topic.create(topic))
+                );
+              component.set("customLatestTopics", customLatestTopics);
+
             })
             .finally(() => component.set("loadingFeatures", false))
             .catch(e => {
