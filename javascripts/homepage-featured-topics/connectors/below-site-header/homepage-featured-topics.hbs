@@ -36,7 +36,7 @@
                     </div>
                   </div>
                   <div class="b-brief__image">
-                    <img src="{{t.image_url}}">
+                    {{raw "list/topic-thumbnail" topic=t thumbnails=thumbnails category=category}}
                   </div>
                 </div>
                 {{/each}}
