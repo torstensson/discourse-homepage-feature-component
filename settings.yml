@@ -32,4 +32,4 @@ show_title:
   default: true
 
 title_text:
-  default: "<a href="/latest">Bài viết mới</a>"
+  default: "<a href='/latest'>Bài viết mới</a>"
