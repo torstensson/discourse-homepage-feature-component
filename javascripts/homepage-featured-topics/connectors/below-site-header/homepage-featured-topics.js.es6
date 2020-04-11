@@ -12,7 +12,6 @@ for (let cat of categories) {
     featuredCategories.push(cat)
   }
 }
-component.set('featuredCategories', featuredCategories)
 
 // homepage-featured-topics
 const FEATURED_CLASS = "homepage-featured-topics";
@@ -43,6 +42,8 @@ export default {
 
         if (showBannerHere) {
           document.querySelector("html").classList.add(FEATURED_CLASS);
+
+          component.set('featuredCategories', featuredCategories);
 
           component.setProperties({
             displayHomepageFeatured: true,
