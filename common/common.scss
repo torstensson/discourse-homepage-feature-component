@@ -1,17 +1,17 @@
 .custom-homepage{
-    background-color: #F5F5F5;
+    background-color: $secondary;
     padding-bottom: 1.6666667vw;
     @media (max-width: 610) {
         padding-bottom: 2.6666667vw;
     }
 }
 .custom-homepage-wrapper{
-    background-color: #F5F5F5;
+    background-color: $secondary;
 }
 .category-homepage-wrapper{
     padding-top: 4em;
     padding-bottom: 1em;
-    background-color: #F5F5F5;
+    background-color: $secondary;
     .category-wapper {
         margin: 0px auto;
         .b-sub {
