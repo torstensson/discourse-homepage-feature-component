@@ -2,24 +2,6 @@ import { ajax } from "discourse/lib/ajax";
 import Topic from "discourse/models/topic";
 import { withPluginApi } from "discourse/lib/plugin-api";
 
-<<<<<<< HEAD
-// category-homepage-wrapper
-import Category from "discourse/models/category";
-let definedFeaturedCategories = ["uncategorized","blog","two"]
-let featuredCategories = [];
-categories = Category.list();
-if(categories){
-  for (let cat of categories) {
-    if (definedFeaturedCategories.includes(cat.name.toLowerCase())) {
-      featuredCategories.push(cat)
-    }
-  }
-}
-
-
-// homepage-featured-topics
-=======
->>>>>>> parent of 9f7fe0a... Update homepage-featured-topics.js.es6
 const FEATURED_CLASS = "homepage-featured-topics";
 
 export default {
@@ -48,12 +30,7 @@ export default {
 
         if (showBannerHere) {
           document.querySelector("html").classList.add(FEATURED_CLASS);
-
-          console.log('featuredCategories');
-          console.log(featuredCategories);
-          component.set('featuredCategories', featuredCategories);
-
-
+          
           component.setProperties({
             displayHomepageFeatured: true,
             loadingFeatures: true
