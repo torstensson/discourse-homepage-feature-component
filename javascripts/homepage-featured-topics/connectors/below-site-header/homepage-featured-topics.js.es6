@@ -4,14 +4,6 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 
 // category-homepage-wrapper
 const Category = require("discourse/models/category").default;
-let definedFeaturedCategories = ["uncategorized","blog","two"]
-let featuredCategories = [];
-categories = Category.list();
-for (let cat of categories) {
-  if (definedFeaturedCategories.includes(cat.name.toLowerCase())) {
-    featuredCategories.push(cat)
-  }
-}
 
 // homepage-featured-topics
 const FEATURED_CLASS = "homepage-featured-topics";
@@ -42,8 +34,18 @@ export default {
 
         if (showBannerHere) {
           document.querySelector("html").classList.add(FEATURED_CLASS);
-
+          
+          let definedFeaturedCategories = ["uncategorized","blog","two"]
+          let featuredCategories = [];
+          categories = Category.list();
+          for (let cat of categories) {
+            if (definedFeaturedCategories.includes(cat.name.toLowerCase())) {
+              featuredCategories.push(cat)
+            }
+          }
+          console.log(featuredCategories);
           component.set('featuredCategories', featuredCategories);
+
 
           component.setProperties({
             displayHomepageFeatured: true,
