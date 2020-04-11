@@ -7,11 +7,14 @@ import Category from "discourse/models/category";
 let definedFeaturedCategories = ["uncategorized","blog","two"]
 let featuredCategories = [];
 categories = Category.list();
-for (let cat of categories) {
-  if (definedFeaturedCategories.includes(cat.name.toLowerCase())) {
-    featuredCategories.push(cat)
+if(categories){
+  for (let cat of categories) {
+    if (definedFeaturedCategories.includes(cat.name.toLowerCase())) {
+      featuredCategories.push(cat)
+    }
   }
 }
+
 
 // homepage-featured-topics
 const FEATURED_CLASS = "homepage-featured-topics";
