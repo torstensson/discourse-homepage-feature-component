@@ -25,8 +25,11 @@ show_for:
     - logged_in
     - logged_out
 
+show_category_list:
+  default: true
+
 show_title:
-  default: false
+  default: true
 
 title_text:
-  default: "Featured Topics"
+  default: "<a href="/latest">Bài viết mới</a>"
