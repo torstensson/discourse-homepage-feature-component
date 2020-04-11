@@ -9,11 +9,11 @@
     background-color: #F5F5F5;
 }
 .category-homepage-wrapper{
-    padding-top: 6em;
+    padding-top: 5em;
     padding-bottom: 1em;
     background-color: #F5F5F5;
     .category-wapper {
-        margin: 15px auto;
+        margin: 0px auto;
         .category-grid {
             display: grid;
             grid-auto-rows: minmax(150px, max-content);
@@ -84,10 +84,6 @@ body:not(.staff) {
         top: 125px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    @media screen and (max-width: 450px) {
-        margin-top: 5em;
     }
 
     h2 {

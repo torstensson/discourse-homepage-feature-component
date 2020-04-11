@@ -1,6 +1,13 @@
 {{#if (theme-setting "show_category_list")}}
 <div class="category-homepage-wrapper">
   <div class="category-wapper wrap">
+    <div class="b-sub" style="display: none">
+      <ul class="b-sub__items-0 h-nav-sub-items">
+        {{#each featuredCategories as |c|}}
+        <li class="b-sub__item-0">{{category-title-link category=c}}</li>
+        {{/each}}
+      </ul>
+    </div>
     <div class="category-grid">
       <div class="cactegory-item cactegory-item-bg" style="background-image: url('https://thuvienmuasam.com/uploads/default/original/2X/2/290dc389bed49ddba73fe82d7a7cbd228e716cdb.svg')">
         <a href="https://thuvienmuasam.com/c/goi-y/8" class="category-link">Gợi ý</a>
