@@ -31,6 +31,7 @@
           <div class="featured-topics">
             {{#each customFeaturedTopics as |t|}}
               <div class="featured-topic" data-index="{{@index}}">
+                {{raw "list/topic-thumbnail" topic=t thumbnails=thumbnails category=category opts=thumbnailOpts}}
                 <div class="featured-topic-image" style="background-image: url({{t.thumbnails.retina}})">
                   <a href="/t/{{t.slug}}"></a>
                 </div>

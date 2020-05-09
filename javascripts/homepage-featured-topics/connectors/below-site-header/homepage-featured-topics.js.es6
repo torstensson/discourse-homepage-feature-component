@@ -46,12 +46,15 @@ export default {
           ajax(topics_json)
             .then(result => {
               // Get posts from tag
+              component.set("defaultThumb", "https://thuvienmuasam.com/uploads/default/original/1X/3db89f04fa083ed69d132f9f3ea4c3506317829c.png");
+
               let customFeaturedTopics = [];
               result.topic_list.topics
                 .slice(0, 4)
                 .forEach(topic =>
                   customFeaturedTopics.push(Topic.create(topic))
                 );
+              console.log(customFeaturedTopics);
               component.set("customFeaturedTopics", customFeaturedTopics);
 
               let customLatestTopicsLeft = [];
