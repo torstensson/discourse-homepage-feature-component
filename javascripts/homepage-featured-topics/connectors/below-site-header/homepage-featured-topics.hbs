@@ -31,7 +31,14 @@
           <div class="featured-topics">
             {{#each customFeaturedTopics as |t|}}
               <div class="featured-topic" data-index="{{@index}}">
+                {{#if t.image_url}}
                 <div class="featured-topic-image" style="background-image: url({{t.image_url}})">
+                {{else}}
+                  {{#if t.thumbnails.retina}}
+                  <div class="featured-topic-image" style="background-image: url({{t.thumbnails.retina}})">
+                  {{/if}}
+                <div class="featured-topic-image" style="background-image: url(https://thuvienmuasam.com/uploads/default/original/1X/3db89f04fa083ed69d132f9f3ea4c3506317829c.png)">
+                {{/if}}
                   <a href="/t/{{t.slug}}"></a>
                 </div>
                 <div class="featured-topic-meta">
@@ -57,7 +64,14 @@
                     </div>
                   </div>
                   <div class="b-brief__image">
+                    {{#if t.image_url}}
                     <img class="d-lazyload" src="{{t.image_url}}">
+                    {{else}}
+                      {{#if t.thumbnails.retina}}
+                      <img class="d-lazyload" src="{{t.thumbnails.retina}}">
+                      {{/if}}
+                    <img class="d-lazyload" src="https://thuvienmuasam.com/uploads/default/original/1X/3db89f04fa083ed69d132f9f3ea4c3506317829c.png">
+                    {{/if}}
                   </div>
                 </div>
                 {{/each}}
@@ -72,7 +86,14 @@
                   </div>
                 </div>
                 <div class="b-snippet__image">
+                  {{#if t.image_url}}
                   <img src="{{t.image_url}}">
+                  {{else}}
+                    {{#if t.thumbnails.retina}}
+                    <img src="{{t.thumbnails.retina}}">
+                    {{/if}}
+                  <img src="https://thuvienmuasam.com/uploads/default/original/1X/3db89f04fa083ed69d132f9f3ea4c3506317829c.png">
+                  {{/if}}
                 </div>
               </div>
               {{/each}}
