@@ -31,7 +31,7 @@
           <div class="featured-topics">
             {{#each customFeaturedTopics as |t|}}
               <div class="featured-topic" data-index="{{@index}}">
-                <div class="featured-topic-image" style="background-image: url({{t.image_url}})">
+                <div class="featured-topic-image">
                   <a href="/t/{{t.slug}}">
                     <img class="featured-topic-thumbnail" 
                         src="{{t.thumbnails.1.url}}"
@@ -65,7 +65,13 @@
                     </div>
                   </div>
                   <div class="b-brief__image">
-                    <img class="d-lazyload" src="{{t.image_url}}">
+                    <img class="latest-topic-thumbnail" 
+                      src="{{t.thumbnails.1.url}}"
+                      srcset="{{t.thumbnails.0.url}}" 
+                      width={{t.thumbnails.0.width}}
+                      height={{t.thumbnails.0.height}}
+                      loading="lazy"
+                    />
                   </div>
                 </div>
                 {{/each}}
@@ -80,7 +86,13 @@
                   </div>
                 </div>
                 <div class="b-snippet__image">
-                  <img src="{{t.image_url}}">
+                  <img class="latest-topic-thumbnail" 
+                    src="{{t.thumbnails.1.url}}"
+                    srcset="{{t.thumbnails.0.url}}" 
+                    width={{t.thumbnails.0.width}}
+                    height={{t.thumbnails.0.height}}
+                    loading="lazy"
+                  />
                 </div>
               </div>
               {{/each}}
