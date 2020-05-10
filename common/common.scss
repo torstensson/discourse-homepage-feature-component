@@ -227,8 +227,8 @@ body:not(.staff) {
             }
 
             .featured-topic-image {
-                background-size: cover;
-                background-position: center center;
+                position: relative;
+                overflow: hidden;
                 font-size: 0%;
                 line-height: 0%;
                 flex-basis: 0;
@@ -255,6 +255,15 @@ body:not(.staff) {
                     max-width: 33.333333%;
                     height: 120px;
                     border-radius: 0;
+                }
+                .img.featured-topic-thumbnail{
+                    height: 100%;
+                    left: 0;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
                 }
             }
         }
