@@ -12,6 +12,10 @@
     padding-top: 4em;
     padding-bottom: 1em;
     background-color: #F5F5F5;
+    @media (min-width: 610px){
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     .category-wapper {
         margin: 0px auto;
         .b-sub {
@@ -88,7 +92,6 @@
 }
 
 body:not(.staff) {
-
     .tag-drop li[data-name="#{$featured-tag}"],
     [data-tag-name="#{$featured-tag}"] {
         display: none;
@@ -114,6 +117,10 @@ body:not(.staff) {
         border-bottom: 1px solid $primary-low;
         padding-bottom: 0.5em;
         margin-bottom: 1em;
+        @media (min-width: 610px){
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
     }
 
     .featured-topics {
