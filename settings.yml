@@ -4,10 +4,16 @@ featured_json:
 featured_tag:
   default: featured
 
+thumb_default:
+  default: https://thuvienmuasam.com/uploads/default/original/1X/3db89f04fa083ed69d132f9f3ea4c3506317829c.png
+
 hide_featured_tag:
   default: false
   description: When this is enabled the featured tag will be hidden from users that aren't admins/moderators.
 
+show_on_url:
+  default: /page/2/
+  description: The position you want to display matches the page url. (dev)
 show_on:
   default: homepage
   type: enum
