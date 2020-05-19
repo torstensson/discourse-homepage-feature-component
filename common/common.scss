@@ -307,6 +307,20 @@ img.dt-lazy-loaded {
     display: flex;
     position: relative;
 }
+.b-grid {
+    .b-brief{
+        color: #3C508A;
+        &:nth-child(4) {
+            color: #443C65;
+        }
+        &:nth-child(6) {
+            color: #0F2273;
+        }
+        &:nth-child(8) {
+            color: #0D408C;
+        }
+    }
+}
 
 .b-meta {
     display: flex;
