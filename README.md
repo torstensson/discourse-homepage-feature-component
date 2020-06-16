@@ -1,6 +1,6 @@
 # discourse-homepage-feature-component
 
-This is a theme component that features topics on your [Discourse](discourse.org/) community's homepage. 
+**test** This is a theme component that features topics on your [Discourse](discourse.org/) community's homepage. 
 
 <img src="https://i.imgur.com/cjpowPe.png">
 
